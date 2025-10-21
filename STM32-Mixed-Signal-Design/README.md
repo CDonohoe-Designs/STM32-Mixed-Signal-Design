@@ -13,11 +13,9 @@ A single‑document design note covering a compact mixed‑signal board built ar
 - Interfaces: SPI/I²C/UART patterns; USB FS with ESD/CMC.  
 - Quick verification checklist and back‑of‑the‑envelope calcs.
 
-## Keywords (ATS‑friendly)
+## Keywords 
 Altium · Schematic & PCB layout · I²C/SPI/UART · Prototype bring‑up/rework · Low‑power DC‑DC & battery charging · EMC/EMI · STM32 · V&V (DV/DVT)
 
-## How to view
-If GitHub’s preview doesn’t render DOCX in your browser, use **Download raw file** to view locally.
 
 ## Contact
 **Caoilte Donohoe** · Dublin, Ireland  
