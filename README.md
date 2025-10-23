@@ -14,7 +14,7 @@ A single‑document design note covering a compact mixed‑signal board built ar
 - Quick verification checklist and back‑of‑the‑envelope calcs.
 
 ## Keywords 
-Altium · Schematic & PCB layout · I²C/SPI/UART · Prototype bring‑up/rework · Low‑power DC‑DC & battery charging · EMC/EMI · STM32 · V&V (DV/DVT)
+Schematic & PCB layout · I²C/SPI/UART · Prototype bring‑up/rework · Low‑power DC‑DC & battery charging · EMC/EMI · STM32 · V&V (DV/DVT)
 
 
 ## Contact
