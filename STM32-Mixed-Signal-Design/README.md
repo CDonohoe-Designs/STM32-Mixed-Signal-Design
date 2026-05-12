@@ -3,7 +3,9 @@
 A single‑document design note covering a compact mixed‑signal board built around an STM32 microcontroller. It summarizes rationale and trade‑offs for analog front‑end (ADC/DAC paths), power (buck + LDO), PCB considerations (Altium), interfaces (SPI/I²C/UART, USB FS), and basic EMC/bring‑up practices.
 
 ## Contents
-- **[STM32 Mixed Signal Design.docx](./STM32%20Mixed%20Signal%20Design.docx)** — Design document (DOCX).
+
+- [View the full design note PDF](./STM32-Mixed-Signal-Design.pdf)
+- [Download editable DOCX source](./Source/STM32-Mixed-Signal-Design.docx)
 
 ## What’s inside the DOCX
 - Requirements and system overview (20 Hz–20 kHz analog path, ≥40 kS/s sampling; USB FS throughput).  
