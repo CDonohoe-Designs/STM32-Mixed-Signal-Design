@@ -19,7 +19,7 @@ Schematic & PCB layout · I²C/SPI/UART · Prototype bring‑up/rework · Low‑
 
 ## Contact
 **Caoilte Donohoe** · Dublin, Ireland  
-Email: caoiltedonohoe@gmail.com · LinkedIn: linkedin.com/in/caoilte-donohoe-17855613 · GitHub: github.com/CDonohoe-Designs
+Email: caoiltedonohoe@gmail.com · LinkedIn: https://www.linkedin.com/in/caoilte-donohoe-69601a40a/ · GitHub: github.com/CDonohoe-Designs
 
 ---
 © 2025 Caoilte Donohoe. All rights reserved.
