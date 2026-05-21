@@ -32,7 +32,7 @@ I created this project as a portfolio piece to demonstrate practical mixed-signa
 
 ## Contact
 **Caoilte Donohoe** · Dublin, Ireland  
-Email: caoiltedonohoe@gmail.com · LinkedIn: https://www.linkedin.com/in/caoilte-donohoe-69601a40a/ · GitHub: github.com/CDonohoe-Designs
+Email: caoiltedonohoe@gmail.com · LinkedIn: https://www.linkedin.com/in/caoilte-donohoe-69601a40a/ · GitHub: [CDonohoe-Designs](https://github.com/CDonohoe-Designs)
 
 ---
 © 2025 Caoilte Donohoe. All rights reserved.
