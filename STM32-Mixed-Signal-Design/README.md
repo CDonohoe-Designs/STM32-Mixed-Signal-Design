@@ -25,12 +25,9 @@ I created this project as a portfolio piece to demonstrate practical mixed-signa
 - Requirements and system overview (20 Hz–20 kHz analog path, ≥40 kS/s sampling; USB FS throughput).  
 - AFE notes: input protection, biasing, Sallen‑Key anti‑aliasing, DAC reconstruction.  
 - Power strategy: USB 5 V → buck (3V3_D) → LDO (3V3_A); noise/PSRR considerations.  
-- PCB/layout pointers (Altium): return paths, test points, split rails (not grounds), bring‑up checklist.  
+- PCB/layout pointers : return paths, test points, split rails (not grounds), bring‑up checklist.  
 - Interfaces: SPI/I²C/UART patterns; USB FS with ESD/CMC.  
 - Quick verification checklist and back‑of‑the‑envelope calcs.
-
-## Keywords 
-Altium · Schematic & PCB layout · I²C/SPI/UART · Prototype bring‑up/rework · Low‑power DC‑DC & battery charging · EMC/EMI · STM32 · V&V (DV/DVT)
 
 
 ## Contact
