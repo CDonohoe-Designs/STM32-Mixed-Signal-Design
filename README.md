@@ -10,7 +10,7 @@ A major part of the work was understanding and documenting the engineering decis
 
 ## Design Documentation
 
-**[View Complete Mixed-Signal Design Report (PDF)](STM32-Mixed-Signal-Design.pdf)**
+**[View Complete Mixed-Signal Design Report (PDF)](STM32-Mixed-Signal-Design/STM32-Mixed-Signal-Design.pdf)**
 
 The design report is the main engineering document for this project and covers:
 
