@@ -1,30 +1,108 @@
-# STM32 Mixed-Signal Signal Generator and Signal Analyser
+# STM32 Mixed-Signal Signal Generator & Analyser
 
-This is my STM32-based mixed-signal design for a compact signal generator and signal analyser.
+I designed this project as a mixed-signal signal generation and acquisition platform based on the **STM32F103**. The system is designed to generate and analyse analogue signals over approximately **20 Hz–20 kHz** using external ADC and DAC signal paths.
 
-I designed this board to show how a small embedded system can generate analogue test signals, capture external analogue signals, and handle the practical mixed-signal design issues that come with ADCs, DACs, USB power, filtering, biasing, EMC protection and PCB layout.
+The project focuses on the complete signal chain rather than the MCU alone: analogue input protection and conditioning, anti-alias filtering, ADC acquisition, DAC reconstruction filtering, analogue output buffering, bias generation, separate analogue/digital power supplies, USB-C and EMC/ESD considerations.
 
-My design uses an STM32 microcontroller as the main controller, with a DAC output path for signal generation and an ADC input path for signal measurement. The DAC side is used to generate low-frequency analogue waveforms, while the ADC side allows an external signal to be conditioned, filtered and sampled for analysis.
+A major part of the work was understanding and documenting the engineering decisions behind each stage, including sampling requirements, filter design, signal biasing, noise, impedance and mixed-signal PCB architecture.
 
-The target signal range is approximately 20 Hz to 20 kHz, so the project is aimed at low-frequency / audio-band signal work rather than high-speed RF. I included analogue front-end circuitry, anti-aliasing and reconstruction filtering, bias generation for single-supply operation, USB-C power input, ESD protection, and separate analogue/digital supply filtering.
+---
 
-At a high level, my design works as:
+## Design Documentation
 
-- **Signal generator:** the STM32 controls the DAC, creating an analogue output signal through a filtered output stage.
-- **Signal analyser:** an external analogue signal enters through the input connector, passes through protection and analogue conditioning, and is then sampled by the ADC.
-- **Mixed-signal PCB example:** the board brings together digital control, analogue signal paths, power regulation, USB, filtering, grounding and EMC considerations in one small design.
+**[View Complete Mixed-Signal Design Report (PDF)](STM32-Mixed-Signal-Design.pdf)**
 
-I created this project as a portfolio piece to demonstrate practical mixed-signal hardware design, from system requirements and schematic capture through to converter selection, analogue filtering, power-supply design and PCB implementation.
+The design report is the main engineering document for this project and covers:
 
-## Contents
+- System architecture and requirements
+- Sampling-rate and ADC/DAC considerations
+- Analogue front-end design
+- Input protection and RF filtering
+- Anti-alias filtering
+- DAC reconstruction filtering
+- Sallen-Key filter design
+- Mid-supply analogue bias generation
+- Separate analogue and digital power architecture
+- USB-C, ESD and EMC considerations
+- STM32F103 implementation
+- STM32CubeIDE configuration
+- Schematic design and component selection
 
-- [View the full design note PDF](./STM32-Mixed-Signal-Design.pdf)
+---
 
+## System Architecture
 
-## What’s inside the DOCX
-- Requirements and system overview (20 Hz–20 kHz analog path, ≥40 kS/s sampling; USB FS throughput).  
-- AFE notes: input protection, biasing, Sallen‑Key anti‑aliasing, DAC reconstruction.  
-- Power strategy: USB 5 V → buck (3V3_D) → LDO (3V3_A); noise/PSRR considerations.  
-- PCB/layout pointers : return paths, test points, split rails (not grounds), bring‑up checklist.  
-- Interfaces: SPI/I²C/UART patterns; USB FS with ESD/CMC.  
-- Quick verification checklist and back‑of‑the‑envelope calcs.
+The system combines signal generation and signal acquisition around the STM32F103:
+
+**Analogue Input → Protection / Filtering → Analogue Front End → ADC → STM32F103**
+
+**STM32F103 → DAC → Reconstruction Filter / Buffer → Analogue Output**
+
+The power architecture uses separate supplies for the analogue and digital sections, with a switching regulator used for the digital circuitry and a low-noise LDO used for the analogue circuitry.
+
+---
+
+## Key Design Areas
+
+### Analogue Front End
+
+The input signal chain includes protection, filtering, buffering and signal conditioning before the ADC.
+
+The analogue input is biased around a mid-supply reference to allow bipolar AC signals to be processed by the single-supply analogue circuitry.
+
+### ADC / DAC
+
+External ADC and DAC devices provide the analogue acquisition and signal-generation paths.
+
+The design considers:
+
+- ADC resolution and sampling rate
+- Nyquist requirements
+- Input impedance
+- ADC drive requirements
+- Anti-alias filtering
+- DAC reconstruction filtering
+- Output buffering
+
+### Power
+
+The power architecture separates the requirements of the digital and analogue circuitry:
+
+- Switching regulation for the digital section
+- Low-noise LDO regulation for the analogue section
+- Input filtering
+- Decoupling
+- Mid-supply analogue bias generation
+
+### USB-C
+
+USB-C provides the external power/interface connection.
+
+The design includes:
+
+- USB-C connection
+- ESD protection
+- Data-line filtering
+- Common-mode filtering
+- Power-input filtering
+
+---
+
+## Development Tools
+
+- **Altium Designer** — schematic and PCB design
+- **STM32CubeIDE** — STM32 configuration and embedded development
+- **LTspice** — analogue and filter analysis
+- **Git / GitHub** — project documentation and version control
+
+---
+
+## What This Project Demonstrates
+
+This project demonstrates my approach to **mixed-signal hardware design**, particularly the interaction between analogue signal conditioning, ADC/DAC conversion, embedded processing and power architecture.
+
+The main engineering focus is on understanding the complete signal path:
+
+**input protection → analogue conditioning → filtering → conversion → processing → signal generation → analogue output**
+
+rather than treating the MCU, ADC, DAC and analogue circuitry as independent blocks.
