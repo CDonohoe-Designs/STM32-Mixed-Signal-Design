@@ -19,7 +19,7 @@ I created this project as a portfolio piece to demonstrate practical mixed-signa
 ## Contents
 
 - [View the full design note PDF](./STM32-Mixed-Signal-Design.pdf)
-- [Download editable DOCX source](./Source/STM32-Mixed-Signal-Design.docx)
+
 
 ## What’s inside the DOCX
 - Requirements and system overview (20 Hz–20 kHz analog path, ≥40 kS/s sampling; USB FS throughput).  
